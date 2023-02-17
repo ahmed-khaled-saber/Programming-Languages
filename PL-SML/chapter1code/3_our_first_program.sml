@@ -1,17 +1,23 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 1: Our first ML program *)
+(* I am Ahmed Khaled tries learning those Materials *)
 
 (* val is a keyword
    x is a variable name
-   = is used as a keyword here (has different meaning in expressions)
+   = is used as a keyword here (has different meaning in expressions) ( Apply Pattern Matching; bind Values to Identifiers ) (not an Assignment Statement)
    34 is a very simple expression (and value)
    ; is used as a keyword here (has different meaning in expressions)
  *)
+
+(* Standard ML knows Value well What its Type by its Type System; How to Communicate Hardware to Perform Computation to produce a Value from Values *)
+
+(* Simplest Expression is a Value, All Composite Expressions are vanishes to that Ground to be a Value *)
+ 
 val x = 34;
 (* static environment: x-->int *)
 (* dynamic environment: x-->34 *)
 
-val y = 17;
+val y = 17; 
 (* static environment: y-->int, x-->int *)
 (* dynamic environment: y-->17, x-->34 *)
 

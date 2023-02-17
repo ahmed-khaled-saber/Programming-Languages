@@ -2,6 +2,8 @@
 (* Section 1: List Functions *)
 
 (* Functions taking or producing lists *)
+(* I am Ahmed Khaled tries learning those Materials *)
+
 
 fun sum_list (xs : int list) =
     if null xs
@@ -13,6 +15,8 @@ fun countdown (x : int) =
     then []
     else x :: countdown(x-1)
 
+(* elegant! *)
+(* ys is fixed parameters on every stack frame can be avoided by introducing Wrapper function *)
 fun append (xs : int list, ys : int list) = (* part of the course logo :) *)
     if null xs
     then ys

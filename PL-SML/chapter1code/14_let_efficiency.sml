@@ -1,6 +1,9 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 1: Let Expressions to Avoid Repeated Computation *)
 
+(* I am Ahmed Khaled tries learning those Materials *)
+
+
 (* badly named: evaluates to 0 on empty list *)
 fun bad_max (xs : int list) =
     if null xs
@@ -36,3 +39,12 @@ fun countdown(from : int, to : int) =
     then to::[]
     else from :: countdown(from-1,to)
 
+
+(* Avoid Reapeatd Computation in general by bind a binding ! specially use a recursive computation twice! *)
+(* الحسابات المتكررة ليست دائما سهلة الإلتقاط أنك حسبتها مسبقا  *)
+(* not recursive but repeated computation
+input  : [1, 1, 1, ...]
+output : [1, 2, 3, ...]
+commulative sum
+[1, 1+1, 1+1+1, ...] bad 
+*)

@@ -1,3 +1,6 @@
+actually it is good to know how to generate REPL logs such that.
+so i can try to produca all possible Errors/Exceptions
+
 - [];
 val it = [] : 'a list
 - [3,4,5];
