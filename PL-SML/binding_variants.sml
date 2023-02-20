@@ -15,3 +15,8 @@ val l = [1, 2, 3, 4];
 (* 3- Data Type Binding *)
 datatype myoption = Some int | None 
 datatype ID = College int | National string 
+
+
+(* Type Synonyms Binding *)
+(* قد يبدو ليس مهما حتي الأن ولكن مكتبة اللغة تُبني عليه *)
+type card  = suit * rank

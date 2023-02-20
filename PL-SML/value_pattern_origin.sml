@@ -45,11 +45,13 @@
 
     SOME 1                     : int Option
     NONE                       : Option
-    
-    constructor Val            : ourDataType      (* Data Type Binding *)    
-    
-
  *)
+(* 
+   [] 
+   ()
+   are values or special patterns to capture logical value ?
+ *)
+
 
  (* REPL has current Temp Value we can make use in time 
     
@@ -60,3 +62,23 @@
     - {2=1+2, 1=3+4} === (7, 3)
 
  *)
+
+(* places to put a pattern 
+   - variable just is a special kind of patterns
+   - what else is a kind of patterns ? 
+   من تعريفي أي سلسلة من الحروف لها هيكل قيمة من قيم اللغة كـ
+   (x, y, z) = (e1, e2, e3)
+   {name=n, mobile=m, age=g} = {name=e1, mobile=e2, age=e3}
+   ...
+
+   val p = e
+   fun f p = e
+   case e of p => e'
+ 
+*)
+
+
+ (* Secret of sml, how list Constructor defined the way it is in between its two arguments
+    a little bit the same as andalso expression 
+    int :: int list 
+    bool andalso bool *)

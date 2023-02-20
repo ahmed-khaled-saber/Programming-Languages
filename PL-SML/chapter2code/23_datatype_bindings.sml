@@ -8,7 +8,7 @@ datatype mytype = TwoInts of int * int
                 | Pizza
 
 val a = Str "hi"  (* is it self value "tagged value"*)
-val b = Str       (* do Type-Check :) it acts as a function wuth type string -> mytype *)
+val b = Str       (* do Type-Check :) it acts as a function with type string -> mytype *)
 val c = Pizza     (* is it self value not a function *)
 val d = TwoInts(1+2,3+4) 
 val e = a

@@ -30,3 +30,9 @@ hd [];
  *)
 
 
+val NONE = SOME 2
+(* Bind exception will be raised because, as we now know, 
+val bindings pattern match on execution.  
+NONE does not match  SOME 2
+SOME 2, but there is no other pattern to try. [case expression]
+Thus, a nonexhaustive binding failure occurs. *)

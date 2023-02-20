@@ -12,3 +12,5 @@ valOf SOME 5
 
 Real.fromInt 2 > 2.0
 
+Int.max(1, 0)
+

@@ -18,6 +18,11 @@ fun inc_or_zero intoption =
         NONE => 0
       | SOME i => i+1
 
+(* Secret of sml, how list Constructor defined the way it is in between its two arguments
+    a little bit the same as andalso expression 
+    int :: int list 
+    bool andalso bool *)
+
 fun sum_list xs =
     case xs of
         [] => 0

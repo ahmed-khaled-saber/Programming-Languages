@@ -1,5 +1,7 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 2: A Little Type Inference *)
+(* Ahmed Khaled passed Feb'23 *)
+
 
 fun sum_triple1 (x, y, z) =
     x + y + z

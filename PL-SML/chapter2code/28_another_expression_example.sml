@@ -13,10 +13,11 @@ datatype exp = Constant of int
 
 fun max_constant e =
     let fun max_of_two (e1,e2) =
-	    let val m1 = max_constant e1
-		val m2 = max_constant e2
+	    let 
+            val m1 = max_constant e1
+		    val m2 = max_constant e2
 	    in 
-		if m1 > m2 then m1 else m2 
+		    if m1 > m2 then m1 else m2 
 	    end
     in
 	case e of
@@ -35,7 +36,7 @@ code copying. *)
 
 fun max_constant2 e =
     case e of
-	Constant i      => i
+	    Constant i      => i
       | Negate e2       => max_constant2 e2
       | Add(e1,e2)      => Int.max(max_constant2 e1, max_constant2 e2)
       | Multiply(e1,e2) => Int.max(max_constant2 e1, max_constant2 e2)
