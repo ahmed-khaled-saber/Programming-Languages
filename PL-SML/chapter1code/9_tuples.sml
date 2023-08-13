@@ -22,6 +22,8 @@ fun sort_pair (pr : int*int) =
 
 (* nested pairs *)
 
+(* Rule: Nested Component Struture needs a Recursive Procedure to handle each Internal Component Individually using the Exact Same Rules of a Pure Compnent*)
+
 val x1 = (7,(true,9)) (* int * (bool*int) *)
 
 val x2 = #1 (#2 x1)  (* bool *)

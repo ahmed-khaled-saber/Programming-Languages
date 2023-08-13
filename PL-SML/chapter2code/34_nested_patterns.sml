@@ -33,7 +33,7 @@ fun shallow_zip3 (l1,l2,l3) =
 (* do this *)
 fun zip3 list_triple =
     case list_triple of 
-	([],[],[]) => []
+		([],[],[]) => []
       | (hd1::tl1,hd2::tl2,hd3::tl3) => (hd1,hd2,hd3)::zip3(tl1,tl2,tl3)
       | _ => raise ListLengthMismatch
 

@@ -34,15 +34,15 @@ fun is_older(date1: int*int*int, date2: int*int*int) = (#1 date1) < (#1 date2) a
 how many dates in the list are in the given month. *)
 fun number_in_month(lod: (int*int*int) list, m: int) =
     let 
-    fun count_for_m(lod: (int*int*int) list) = 
-        if null lod
-        then 0
-        else
-            if #2 (hd lod) = m then count_for_m(tl lod) + 1  else count_for_m(tl lod)
+        fun count_for_m(lod: (int*int*int) list) = 
+            if null lod
+            then 0
+            else
+                if #2 (hd lod) = m then count_for_m(tl lod) + 1  else count_for_m(tl lod)
     in 
         count_for_m(lod)
     end
-(* Code is clean because i avoided {make use of vars in the environment m} pattern, is'nt it? *)
+(* Code is clean because i avoided {make use of vars already in the environment "m"} pattern, is'nt it? *)
 
 (* 3. Write a function number_in_months that takes a list of dates and a list of months (i.e., an int list)
 and returns the number of dates in the list of dates that are in any of the months in the list of months.
@@ -86,7 +86,7 @@ fun dates_in_months(lod: (int*int*int) list, lom: int list) =
     if null lom
     then []
     else dates_in_month(lod, hd lom) @ dates_in_months(lod, tl lom)
-(* code is clean due to the more complex problem is composed by less complex solution = Function omposition *)
+(* code is clean due to the more complex problem is composed by less complex solution = Function composition *)
 
 (* 6. Write a function get_nth that takes a list of strings and an int n and returns the nth element of the
 list where the head of the list is 1st. Do not worry about the case where the list has too few elements:
@@ -95,7 +95,7 @@ fun get_nth(los: string list, n: int) =
     if n = 1
     then hd los
     else get_nth(tl los, n-1)
-(* code is clean because the way n goes from higher to lower value istead of carring an increasing accumlator *)
+(* code is clean because the way n goes from higher to lower value instead of carring an increasing accumlator *)
 
 (* 7. Write a function date_to_string that takes a date and returns a string of the form January 20, 2013
 (for example). Use the operator ^ for concatenating strings and the library function Int.toString
@@ -122,7 +122,7 @@ value; it is okay for an exception to occur if this is not the case. *)
 fun number_before_reaching_sum(sum: int, ns: int list) = 
     let 
         val z1 = sum - (hd ns)                     (**)
-        val z2 = sum - ( (hd ns) + (hd (tl ns)) )  (*hd ,and tl is cheap, although z2 = z1 - hd tl ns is nicer *)
+        val z2 = sum - ( (hd ns) + (hd (tl ns)) )  (* hd ,and tl is cheap, although z2 = z1 - hd tl ns is nicer *)
     in
         if z1 > 0 andalso z2 <= 0
         then hd ns
@@ -149,7 +149,7 @@ fun what_month(day: int) =
     in 
         wh_month(day, month's_days)
     end
-(* I need some one guide me if there is a better flow of thinking *)
+(* I need some one guide me if there was a better flow of thinking *)
 
 (* 10. Write a function month_range that takes two days of the year day1 and day2 and returns an int list
 [m1,m2,...,mn] where m1 is the month of day1, m2 is the month of day1+1, ..., and mn is the month

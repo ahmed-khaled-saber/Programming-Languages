@@ -26,11 +26,13 @@ fun max1 (xs : int list) =
     if null xs
     then NONE
     else 
-	let val tl_ans = max1(tl xs)
-	in if isSome tl_ans andalso valOf tl_ans > hd xs
-	   then tl_ans
-	   else SOME (hd xs)
-	end
+		let
+			val tl_ans = max1(tl xs)
+		in
+			if isSome tl_ans andalso valOf tl_ans > hd xs
+	   		then tl_ans
+	   		else SOME (hd xs)
+		end
 
 
 (* looks the same as max1 to clients; 
@@ -61,15 +63,15 @@ fun max2 (xs : int list) =
 (* Solution Evolution
 
 	max int list -> int 
-	even on [] input case it returns 0  => WRONG LOGiC 0 is an int possibly is the right answer
+	even on [] input case it returns 0  => WRONG LOGiC,  0 is an int possibly is the right answer
 
 	max int list -> int list 
-	on [] input case it returns [0]     => not so bad but Strange Interface to Clients
+	on [] input case it returns []     => not so bad but Strange Interface to Clients
 
 	max int list -> int
 	on [] input case it RAISE Exception => not so bad but there is better
 
-	كون إجراء عنده إجابة لجسبة ما او ليس لديه اي حسبة مطلقا شئ شائع جدا
+	كون إجراء عنده إجابة لحِسبة ما او ليس لديه اي حسبة مطلقا شئ شائع جدا
 	special Type for that is there
 
 	max int list -> int option   // Consistent Solution :)

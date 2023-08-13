@@ -82,3 +82,17 @@
     a little bit the same as andalso expression 
     int :: int list 
     bool andalso bool *)
+
+
+(* 
+Theory of Computation
+Alphapet Symbol Reuse 
+The "*" in Expressions if for Multiplication
+         in Types is for Seprating a Tuple Elements
+*)
+
+(* 
+Function name without (), is exprssion evaluates to value of type _ -> _ .
+Anonymous function is an expression evaluates to value of type _ -> _.
+
+ *)

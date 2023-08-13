@@ -1,6 +1,6 @@
 (* one Major aspect of functional programming is once data is build in memory it can't subsequently changed by code *)
 
-(* if some data already exists space efficintly to reuse it if we're going to build a subtle variant of it not rebuild by copeing *)
+(* if some data already exists space efficintly to reuse it. if we're going to build a subtle variant of it not rebuild by copeing *)
 
 val x = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10] (* imagine 10^9 or even bigger *)
 val y = x                                  (* copieng element wise is not make any wise! *)
@@ -52,7 +52,7 @@ ys = [4, 5]
 zs = append(xs, ys)
 
 
-(* In Java programmers are obssessed ! and they have to *)
+(* In Java, programmers are obssessed ! and they have to *)
 (* class ProtectedResource {
     private Resource theResource = ...;
     private String[] allowedUsers = ...;
@@ -74,4 +74,4 @@ zs = append(xs, ys)
     }
 } *)
 
-(* internal allowedUsers data is exposured to any clients to mutate it as its referencr has gotten *)
+(* internal allowedUsers data is exposured to any clients to mutate it as its referencre has gotten *)

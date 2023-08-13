@@ -9,8 +9,9 @@ fun pow (x:int, y:int) =
     then 1
     else x * pow(x,y-1)
 
-(* offset Binding is to demonstrate that while Evaluating a function body on its Call not Definition,
+(* offset Binding is to demonstrate that while Evaluating a function body on its Call not its Definition,
     it is evauated on the dynamic env back to its Definition extended by arguments values,
+    The Argument values is evaluated by the Environment at The Function call.
     so offset evaluates diffrently shifts squares by one while cube by 2WW
  *)
 

@@ -9,6 +9,11 @@
  It is not an Assignment so the location of memory of that variable are Mutation, no Mutation Absolotely on SML
 *)
 
+(* 
+Think of each Line of code, a new Binding 
+as a Discrete Instance of Time has its Unique Static and Dynamic Environments, 
+which so the next time instant use it to do its Evaluation. *)
+
 
 val a = 10
 
