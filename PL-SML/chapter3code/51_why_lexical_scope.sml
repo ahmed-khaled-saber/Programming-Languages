@@ -1,6 +1,8 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 3: Why Lexical Scope *)
 
+(* I'm Ahmed Khaled, learning those material 14 Aug. 2023 *)
+
 (* f1 and f2 are always the same, no matter where the result is used *)
 
 fun f1 y =
@@ -58,3 +60,10 @@ fun noNegatives xs = filter(greaterThanX ~1, xs)
 
 fun allGreater (xs,n) = filter (fn x => x > n, xs)
 
+
+(* Quiz Question *)
+fun f g = let val x = 9 in g() end
+val x = 7
+fun h() = x+1
+val y = f h
+(* What value does y have under lexical scope (like in ML) and under dynamic scope (unlike in ML)?  *)
