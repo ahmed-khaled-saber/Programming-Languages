@@ -1,6 +1,9 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 3: Another Closure Idiom: Currying *)
 
+(* I'm Ahmed Khaled, learning those material 15 Aug. 2023 *)
+
+
 (* old way to get the effect of multiple arguments *)
 fun sorted3_tupled (x,y,z) = z >= y andalso y >= x
 

@@ -3,14 +3,20 @@
 
 (* Another hall-of-fame higher-order function *)
 
+(* I'm Ahmed Khaled, learning those material 15 Aug. 2023 *)
+
+
 (* note this is "fold left" if order matters 
    can also do "fold right" *)
 fun fold (f,acc,xs) =
     case xs of 
 	[] => acc
       | x::xs' => fold (f,f(acc,x),xs')
+(* fold do not need to know what data, even their type, even what sort of computation applied *)
+(* ('a * 'b -> 'a) * 'a * 'b list -> 'a *)
 
 (* examples not using private data *)
+(* المقصود من بيانات سرية هو بيانات السياق التي ستنشأ فيه الدالة المرسولة من غير عواملها لدالة فولد *)
 
 fun f1 xs = fold ((fn (x,y) => x+y), 0, xs)
 
@@ -30,6 +36,7 @@ fun f4 (xs,s) =
 	fold((fn (x,y) => x andalso String.size y < i), true, xs)
     end
 
+(* more abstraction, g decides *)
 fun f5 (g,xs) = fold((fn(x,y) => x andalso g y), true, xs)
 
 fun f4again (xs,s) =

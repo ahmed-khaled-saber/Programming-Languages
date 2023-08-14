@@ -1,6 +1,9 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 3: Another Closure Idiom: Combining Functions *)
 
+(* I'm Ahmed Khaled, learning those material 15 Aug. 2023 *)
+
+
 fun compose (f,g) = fn x => f (g x)
 
 fun sqrt_of_abs i = Math.sqrt(Real.fromInt (abs i))
