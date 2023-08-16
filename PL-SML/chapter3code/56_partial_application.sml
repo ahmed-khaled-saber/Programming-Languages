@@ -1,6 +1,9 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 3: Partial Application *)
 
+(* I'm Ahmed Khaled, learning those material 15 Aug. 2023 *)
+
+
 fun sorted3 x y z = z >= y andalso y >= x
 
 fun fold f acc xs = (* means fun fold f = fn acc => fn xs => *)
@@ -12,6 +15,7 @@ fun fold f acc xs = (* means fun fold f = fn acc => fn xs => *)
    a closure, which is often useful -- a powerful idiom (no new semantics) *)
 
 val is_nonnegative = sorted3 0 0
+(* x maps to 0, y maps to 0, ... *)
 
 val sum = fold (fn (x,y) => x+y) 0
 

@@ -15,11 +15,20 @@ val sorted3 = fn x => fn y => fn z => z >= y andalso y >= x
 (* alternately: fun sorted3 x = fn y => fn z => z >= y andalso y >= x *)
 
 val t2 = ((sorted3 7) 9) 11
+(* (sorted3 7) 
+  code: fn y => fn z => z >= y andalso y >= x
+  environmentL x maps to 7  *)
+(* (sorted3 7) 9 
+  code: fn z => z >= y andalso y >= x
+  environmentL x maps to 7, and y maps 9  *)
+(* ((sorted3 7) 9) 11
+  code: z >= y andalso y >= x
+  environmentL x maps to 7, and y maps 9, and z maps 11  *)
 
 (* syntactic sugar for calling curried functions: optional parentheses *)
 val t3 = sorted3 7 9 11 
 
-(* syntactic sugar for defining curried functions: space between arguments *)
+(* syntactic sugar for defining curried functions: space between arguments mean curring *)
 fun sorted3_nicer x y z = z >= y andalso y >= x
 
 (* more calls that work: *)
