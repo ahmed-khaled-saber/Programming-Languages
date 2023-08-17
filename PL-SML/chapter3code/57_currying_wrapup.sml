@@ -22,8 +22,11 @@ fun uncurry f (x,y) = f x y
 *)
 
 fun other_curry1 f = fn x => fn y => f y x
-
 fun other_curry2 f x y = f y x
+(* 
+    f was the curried function takes y then x
+    other_curry1 f returns that takes x then y
+*)
 
 (* example *)
 
