@@ -7,7 +7,8 @@
 (* these two bindings would be internal (private) to the library *)
 val cbs : (int -> unit) list ref = ref []
 fun onEvent i =
-   let fun loop fs =
+   let 
+    fun loop fs =
         case fs of 
           [] => ()
         | f::fs' => (f i; loop fs')
@@ -20,7 +21,10 @@ fun onKeyEvent f = cbs := f::(!cbs)
    notice different environments use bindings of different types
  *)
 val timesPressed = ref 0
-val _ = onKeyEvent (fn _ => timesPressed := (!timesPressed) + 1)
+
+val _ = onKeyEvent (fn _ => timesPressed := (!timesPressed) + 1) 
+(* just initialize the counter to be zero *)
+(* _ any key will run this register code *)
 
 fun printIfPressed i =
     onKeyEvent (fn j => if i=j
@@ -32,3 +36,6 @@ val _ = printIfPressed 11
 val _ = printIfPressed 23
 val _ = printIfPressed 4
 
+
+onEvent 11
+(* it's going to pass 11 to all the closures on [cbs]"callbacks" *)

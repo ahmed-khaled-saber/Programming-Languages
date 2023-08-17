@@ -96,3 +96,28 @@ Function name without (), is exprssion evaluates to value of type _ -> _ .
 Anonymous function is an expression evaluates to value of type _ -> _.
 
  *)
+
+ 
+ 
+ (* 
+ References
+
+ Type: t ref,
+ int ref
+ 
+ Primitives:- 
+
+ function ref e, : t -> 
+ e is evaluated to an initail value, then a reference to location where e retuned by the function
+
+Assignment statement
+e1 := e2
+e1 must be a reference type has a t ref
+e2 is a new value, has to be a t
+
+Reading value
+!e
+e has to be a ref type
+
+
+*)
