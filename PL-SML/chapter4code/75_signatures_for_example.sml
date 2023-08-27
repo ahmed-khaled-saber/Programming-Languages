@@ -1,6 +1,8 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 4: Signatures for Our Example *)
 
+(* I'm Ahmed Khaled tries learning those materials on 26 aug. 2023 *)
+
 (* this signature hides gcd and reduce.  
 That way clients cannot assume they exist or 
 call them with unexpected inputs. *)

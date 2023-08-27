@@ -1,6 +1,9 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 4: Signatures and Hiding Things *)
 
+(* I'm Ahmed Khaled tries learning those materials on 26 aug. 2023 *)
+
+
 signature MATHLIB =
 sig
 val fact : int -> int
@@ -10,10 +13,7 @@ end
 
 structure MyMathLib :> MATHLIB =
 struct
-fun fact x =
-    if x=0
-    then 1
-    else x * fact (x - 1)
+fun fact x = if x=0 then 1 else x * fact (x - 1)
 
 val half_pi = Math.pi / 2.0
 

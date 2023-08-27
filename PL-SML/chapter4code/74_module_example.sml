@@ -1,6 +1,8 @@
 (* Programming Languages, Dan Grossman *)
 (* Section 4: A Module Example *)
 
+(* I'm Ahmed Khaled tries learning those materials on 26 aug. 2023 *)
+
 (* will assign different signatures to this module in later segments *)
 
 structure Rational1 = 
